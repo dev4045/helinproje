@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
             )),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            print('helin tikladi');
+            print('helin tikladim');
           },
           child: Icon(
             Icons.access_alarm,
