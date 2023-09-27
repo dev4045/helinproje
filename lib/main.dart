@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.yellow,
         appBar: AppBar(
           title: Text(
-            'Baslik',
+            'Baslikli',
             style: TextStyle(
               color: Colors.red,
               fontSize: 30.2,
