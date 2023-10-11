@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:helin_project/unite1_16/image_widget.dart';
+import 'package:helin_project/unite_17/helin_isim_olustur.dart';
+import 'package:helin_project/unite_17/my_counter_page.dart';
+import 'package:helin_project/unite_17/stateffull_widget_ornek.dart';
 
 void main() {
   runApp(MyApp());
@@ -6,40 +11,22 @@ void main() {
 
 // ignore: use_key_in_widget_constructors
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.yellow,
-        appBar: AppBar(
-          title: Text(
-            'Baslikli',
-            style: TextStyle(
-              color: Colors.red,
-              fontSize: 30.2,
-            ),
+        title: 'My Counter App',
+        theme: ThemeData(
+            primarySwatch: Colors.teal,
+            textTheme: TextTheme(
+                headline1: TextStyle(
+                    color: Colors.purple, fontWeight: FontWeight.bold))),
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('Image Örnekleri'),
           ),
-          backgroundColor: Colors.amber,
-        ),
-        body: Text('merhaba',
-            style: TextStyle(
-              color: Colors.pink,
-              fontWeight: FontWeight.w500,
-              fontSize: 24,
-            )),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            print('helin tikladim');
-          },
-          child: Icon(
-            Icons.access_alarm,
-            color: Colors.black,
-            size: 45.2,
-            weight: 1.2,
-          ),
-          backgroundColor: Colors.red,
-        ),
-      ),
-    );
+          body: imageOrnekleri(),
+        ));
   }
 }
